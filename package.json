@@ -1,12 +1,12 @@
 {
-  "name": "resume",
+  "name": "hyungmok-resume",
   "version": "0.0.0",
-  "repository": "https://github.com/HyunSeob/resume.git",
-  "author": "HyunSeob <mail@hyunseob.me>",
+  "repository": "https://github.com/hmhm2292/hyungmok-resume",
+  "author": "Hyung Mok Kim <hyungmok.kim92@gmail.com@>",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf docs; parcel build -d docs --public-url /resume src/index.html"
+    "build": "rm -rf docs; parcel build -d docs --public-url https://github.com/hmhm2292/hyungmok-resume src/index.html"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
