@@ -53,20 +53,24 @@
           <div id="toggleLabel" class="toggleLabel">Dark</div>
         </div>
         <script>
+          let isPreferredThemeChecked = false;
           var dark =
             window.matchMedia &&
             window.matchMedia("(prefers-color-scheme: dark)").matches;
+          console.log({ dark });
 
           var element = document.body;
           var toggle = document.getElementById("toggle");
           var toggleLabel = document.getElementById("toggleLabel");
 
-          if (dark) {
+          if (dark && !isPreferredThemeChecked) {
+            console.log("dark");
             toggle.checked = true;
             toggleDarkMode();
           }
 
           function toggleDarkMode() {
+            isPreferredThemeChecked = true;
             element.classList.toggle("dark-mode");
             if (toggle.checked) {
               toggleLabel.innerText = "Light";
