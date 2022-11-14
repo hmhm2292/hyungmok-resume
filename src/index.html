@@ -39,6 +39,43 @@
 
   <body>
     <div class="container">
+      <div class="toggleContainer">
+        <div class="toggleSwitchContainer">
+          <input
+            onclick="toggleDarkMode()"
+            type="checkbox"
+            id="toggle"
+            hidden
+          />
+          <label for="toggle" class="toggleSwitch">
+            <span class="toggleButton"></span>
+          </label>
+          <div id="toggleLabel" class="toggleLabel">Dark</div>
+        </div>
+        <script>
+          var dark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+          var element = document.body;
+          var toggle = document.getElementById("toggle");
+          var toggleLabel = document.getElementById("toggleLabel");
+
+          if (dark) {
+            toggle.checked = true;
+            toggleDarkMode();
+          }
+
+          function toggleDarkMode() {
+            element.classList.toggle("dark-mode");
+            if (toggle.checked) {
+              toggleLabel.innerText = "Light";
+            } else {
+              toggleLabel.innerText = "Dark";
+            }
+          }
+        </script>
+      </div>
       <section>
         <h1>
           반갑습니다,<br />프론트엔드 개발자 김형목입니다<span

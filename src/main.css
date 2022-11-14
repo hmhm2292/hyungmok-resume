@@ -9,7 +9,7 @@
 }
 
 html,
-body {
+body  {
   font-size: 16px;
   word-break: keep-all;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, Bazier Square,
@@ -23,6 +23,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.dark-mode {
+  background-color:#282A35;
+  color: #eeeeee;
+}
+
+
 
 @media screen and (max-width: 960px) {
   html,
@@ -42,6 +49,8 @@ body:before {
   background:#184e7b;
   background: linear-gradient(to right, #184e7b, #277BC0, #31a2ff);
 }
+
+
 
 section {
   padding: 0 2rem;
@@ -131,6 +140,7 @@ ul > li:before {
   width: 100%;
   max-width: 50rem;
   margin: auto;
+  margin-top: 30px;
 }
 
 .period-mark {
@@ -159,9 +169,6 @@ ul > li:before {
   display: flex;
   flex-direction: column;
 }
-
-
-
 .other {
   flex-direction: column;
   padding: 3rem 0;
@@ -187,3 +194,66 @@ ul > li:before {
   display: block;
   margin-bottom: 1.5rem;
 }
+
+.toggleContainer {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  margin-right:25px;
+}
+
+.toggleSwitchContainer { 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.toggleSwitch {
+  width: 3.8rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  border-radius: 2rem;
+  background-color:  #ffffff;
+  box-shadow: 0 0 1rem 1px rgba(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+
+.toggleSwitch .toggleButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: .2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background:#277BC0;
+}
+
+.toggleLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+
+/* 체크박스가 체크될 시 변경되는 요소 */
+#toggle:checked ~ .toggleSwitch {
+  background: #277BC0;
+}
+
+#toggle:checked ~ .toggleSwitch .toggleButton {
+  /* 100% -> 끝위치, 2.8rem -> 버튼 크기 */
+  left: calc(100% - 1.7rem);
+  background: #eeeeee;
+}
+
+.toggleSwitch, .toggleButton {
+  transition: all 0.2s ease-in;
+}
+
+
