@@ -63,18 +63,20 @@
           var toggle = document.getElementById("toggle");
           var toggleLabel = document.getElementById("toggleLabel");
 
-          if (dark && !isPreferredThemeChecked) {
+          if (dark) {
             console.log("dark");
             toggle.checked = true;
             toggleDarkMode();
           }
 
           function toggleDarkMode() {
-            isPreferredThemeChecked = true;
-            element.classList.toggle("dark-mode");
+            console.log("toggle");
+
             if (toggle.checked) {
+              element.classList.add("dark-mode");
               toggleLabel.innerText = "Light";
             } else {
+              element.classList.remove("dark-mode");
               toggleLabel.innerText = "Dark";
             }
           }
