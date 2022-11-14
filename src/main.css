@@ -249,8 +249,8 @@ ul > li:before {
   height: 14px;
   align-self:center;
   margin-left: auto;
-
-
+  pointer-events: none;
+  user-select: none;
 }
 
 .dark {
@@ -258,6 +258,8 @@ ul > li:before {
   height: 0px;
   align-self:center;
   margin-right: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 
