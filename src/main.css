@@ -18,6 +18,7 @@ body  {
     Noto Color Emoji;
   letter-spacing: -0.3px;
   color: #222222;
+  background: #eeeeee;
   padding-bottom: 2rem;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -162,7 +163,7 @@ ul > li:before {
 .experience {
   flex-direction: column;
   padding: 3rem 0;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .company {
@@ -172,7 +173,7 @@ ul > li:before {
 .other {
   flex-direction: column;
   padding: 3rem 0;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .role {
@@ -217,8 +218,8 @@ ul > li:before {
   display: block;
   position: relative;
   border-radius: 2rem;
-  background-color:  #ffffff;
-  box-shadow: 0 0 1rem 1px rgba(0 0 0 / 10%);
+  background-color:  #eeeeee;
+  border: 1px solid #dadada;
   cursor: pointer;
 }
 
@@ -231,7 +232,10 @@ ul > li:before {
   left: .2rem;
   transform: translateY(-50%);
   border-radius: 50%;
-  background:#277BC0;
+  background:#3e3e41;
+  display: flex;
+
+
 }
 
 .toggleLabel {
@@ -240,11 +244,29 @@ ul > li:before {
   margin-top: 5px;
 }
 
+.light {
+  width: 14px;
+  height: 14px;
+  align-self:center;
+  margin-left: auto;
+
+
+}
+
+.dark {
+  width: 0px;
+  height: 0px;
+  align-self:center;
+  margin-right: auto;
+}
+
+
 
 /* 체크박스가 체크될 시 변경되는 요소 */
 #toggle:checked ~ .toggleSwitch {
-  background: #277BC0;
+  background: #282A35;
 }
+
 
 #toggle:checked ~ .toggleSwitch .toggleButton {
   /* 100% -> 끝위치, 2.8rem -> 버튼 크기 */
@@ -252,8 +274,22 @@ ul > li:before {
   background: #eeeeee;
 }
 
+#toggle:checked ~  .toggleSwitch .toggleButton .light {
+  width: 0px;
+  height: 0px;
+
+}
+
+
+#toggle:checked ~ .toggleSwitch .toggleButton .dark {
+  width: 16px;
+  height: 16px;
+
+}
+
 .toggleSwitch, .toggleButton {
   transition: all 0.2s ease-in;
 }
+
 
 
