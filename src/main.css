@@ -17,7 +17,7 @@ body  {
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
     Noto Color Emoji;
   letter-spacing: -0.3px;
-  color: #222222;
+  color: #282A35;
   background: #eeeeee;
   padding-bottom: 2rem;
   overflow-x: hidden;
@@ -25,9 +25,11 @@ body  {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .dark-mode {
   background-color:#282A35;
   color: #eeeeee;
+
 }
 
 
