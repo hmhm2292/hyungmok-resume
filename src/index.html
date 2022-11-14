@@ -42,45 +42,44 @@
       <div class="toggleContainer">
         <div class="toggleSwitchContainer">
           <input
-            onclick="toggleDarkMode()"
+            onclick="toggleDarkMode && toggleDarkMode()"
             type="checkbox"
             id="toggle"
             hidden
           />
+
           <label for="toggle" class="toggleSwitch">
             <span class="toggleButton"></span>
           </label>
           <div id="toggleLabel" class="toggleLabel">Dark</div>
-        </div>
-        <script>
-          let isPreferredThemeChecked = false;
-          var dark =
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches;
-          console.log({ dark });
+          <script type="text/javascript"></script>
+          <script>
+            var dark =
+              window.matchMedia &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches;
+            console.log({ dark });
 
-          var element = document.body;
-          var toggle = document.getElementById("toggle");
-          var toggleLabel = document.getElementById("toggleLabel");
+            var element = document.body;
+            var toggle = document.getElementById("toggle");
+            var toggleLabel = document.getElementById("toggleLabel");
 
-          if (dark) {
-            console.log("dark");
-            toggle.checked = true;
-            toggleDarkMode();
-          }
-
-          function toggleDarkMode() {
-            console.log("toggle");
-
-            if (toggle.checked) {
-              element.classList.add("dark-mode");
-              toggleLabel.innerText = "Light";
-            } else {
-              element.classList.remove("dark-mode");
-              toggleLabel.innerText = "Dark";
+            if (dark) {
+              console.log("dark");
+              toggle.checked = true;
+              toggleDarkMode();
             }
-          }
-        </script>
+
+            function toggleDarkMode() {
+              if (toggle.checked) {
+                element.classList.add("dark-mode");
+                toggleLabel.innerText = "Light";
+              } else {
+                element.classList.remove("dark-mode");
+                toggleLabel.innerText = "Dark";
+              }
+            }
+          </script>
+        </div>
       </div>
       <section>
         <h1>
