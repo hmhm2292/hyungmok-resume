@@ -88,9 +88,6 @@
 
           <div class="project">
             <h4>커넥팅 통화<span class="period-mark">.</span></h4>
-            <span class="time">
-              <time datetime="2020-08">2020. 08</time> - 현재
-            </span>
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
               월 평균 <b>50만</b>권의 통화가 진행되는 client side WebRTC 기능을
@@ -98,10 +95,8 @@
             </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>1대1 랜덤 실시간 통화 기능</li>
-              <li>실시간 그룹랜덤 통화 기능</li>
-              <li>실시간 룸 통화 기능</li>
-              <li>채팅방 통화 기능</li>
+              <li>1대1/1:N 랜덤 실시간 통화 기능 구현</li>
+              <li>통화 기능 에 사용 되는 메칭서버(websocket) 연결</li>
               <li>Mesh(P2P) 방식으로 1:1/1:N 통화 기능 구현</li>
               <li>SFU(Selective Forwarding Unit) 서버 로 (2022. 07) 이전</li>
             </ul>
@@ -113,9 +108,6 @@
 
           <div class="project">
             <h4>커넥팅 피드 탭<span class="period-mark">.</span></h4>
-            <span class="time">
-              <time datetime="2020-08">2022. 04</time> - 햔재
-            </span>
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
               유저들이 자유롭게 익명으로 글을 작성하고 소통할수 있는 피드 기능
@@ -129,6 +121,7 @@
                 이전
               </li>
               <li>React, 로 앱과 연동 되는 웹뷰 구현</li>
+              <li>앱 과 웹뷰간의 통신 기능 모듈화</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>
@@ -138,9 +131,6 @@
           </div>
           <div class="project">
             <h4>커넥팅 결재, 구독<span class="period-mark">.</span></h4>
-            <span class="time">
-              <time datetime="2021-07">2021. 03</time> - 햔재
-            </span>
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
               Android(Google Play store) 와 iOS(App Store) 의 purchase flow 를
@@ -150,6 +140,7 @@
             <ul>
               <li>인앱 구독 기능 구현</li>
               <li>인앱 결재 기능 계선</li>
+              <li>인앱 결재/구독 에러 핸들링 처리</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>TypeScript, React Native, React Native-iap</p>
@@ -160,9 +151,7 @@
                 >.</span
               >
             </h4>
-            <span class="time">
-              <time datetime="2020-10">2020. 05</time> - 햔재
-            </span>
+
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
               커넥팅은 글로벌 시장을 타겟팅 하기 위해, 일본(2020. 05 출시),
@@ -173,11 +162,10 @@
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
               <li>
-                앱 사용시 유저가 선택한 언어/지역에 맞게 localization 작업을
-                했습니다.
+                앱 사용시 유저가 선택한 언어/지역에 맞게 localization 작업
               </li>
-              <li>아랍권 진출 시 엡의 layout 을 RTL 적용 시켰습니다.</li>
-              <li>언어 변역 에 맞도록 커스텀 Typography 컴포넌트 구축</li>
+              <li>아랍권 진출 시 엡의 layout 을 RTL 적용.</li>
+              <li>언어 변역 에 맞도록 커스텀 Typography 컴포넌트 구현</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>TypeScript, React Native, React Native-localize, i18n-js</p>
@@ -216,13 +204,18 @@
               업무에 적극적으로 활용합니다.
             </li>
             <li>
-              회고를 통해 팀의 프로세스 또는 문화를 개선하기 위한 다양한 시도를
-              적극적으로 합니다.
-            </li>
-            <li>
               매번 최신의 기술이 옳다고 생각 하지는 않습니다. 상황에 따라 적절한
               선택이 있다고 믿습니다.
             </li>
+            <li>
+              회고를 통해 팀의 프로세스 또는 문화를 개선하기 위한 다양한 시도를
+              적극적으로 합니다.
+            </li>
+          </ul>
+        </div>
+        <div class="other">
+          <h3>Communication<span class="period-mark">.</span></h3>
+          <ul>
             <li>커뮤니케이션은 적은 것보다는 많은게 좋다고 믿습니다.</li>
             <li>원어민 수준으로 영어 커뮤니케이션이 가능합니다.</li>
           </ul>
@@ -247,7 +240,7 @@
             </li>
             <li>
               Redux/Redux-Saga 를 사용해 앱에 컴포넌트 로직과 비지니스 로직을
-              분리해 유지보스를 했습니다.
+              분리해 유지보수를 했습니다.
             </li>
           </ul>
         </div>
