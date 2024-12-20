@@ -5,17 +5,17 @@
   "author": "Hyung Mok Kim <hyungmok.kim92@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "rm -rf docs; parcel build -d docs --public-url /hyungmok-resume src/index.html"
+    "start": "parcel serve src/index.html",
+    "build": "parcel build src/index.html --dist-dir docs --public-url /hyungmok-resume"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
-    "spoqa-han-sans": "^2.1.2"
+    "normalize.css": "^8.0.1",
+    "spoqa-han-sans": "^3.3.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "cssnano": "^4.1.4",
-    "parcel-bundler": "^1.12.5",
-    "postcss-modules": "^1.4.1"
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "parcel": "^2.13.2",
+    "postcss-modules": "^6.0.1"
   }
 }

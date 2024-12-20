@@ -1,0 +1,2 @@
+var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=document.body,d=document.documentElement,n=document.getElementById("toggle"),o=document.getElementById("header");function a(){t.classList.toggle("dark-mode"),d.classList.toggle("dark-mode")}e&&(n.checked=!0,a()),n.onclick=a;var c=o.textContent.replace("N",new Date().getYear()-new Date("2020-01-20").getYear()+1);o.textContent=c;
+//# sourceMappingURL=index.7737ff0d.js.map
